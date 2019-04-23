@@ -1,0 +1,19 @@
+#!/bin/bash
+#***************************************************************************
+# updatetemphum  --  This script will update the static file that contains
+#	the last measurements for temperature and humidity from the scripts
+#	in /usr/local/bin
+#
+# 20170601
+# Peter Yezek <peter.yezek@uni.edu>
+#***************************************************************************
+
+DOCROOT=/var/www/html
+
+/usr/local/bin/unitemphum.py 2302 4 > $DOCROOT/temphum
+/usr/local/bin/temperature.py 2302 4 > $DOCROOT/temperature
+/usr/local/bin/humidity.py 2302 4 > $DOCROOT/humidity
+
+chmod 644 $DOCROOT/temphum
+chmod 644 $DOCROOT/temperature
+chmod 644 $DOCROOT/humidity
