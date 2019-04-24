@@ -5,7 +5,9 @@ humidty sensors for the datacenters. The units we were previously using were
 over $400 and we found we could build our own for less than $100 each.
 
 The files in this project are the configs that have been changed to get this
-set up on top of raspbian and get the data in a format usable by PRTG.
+set up on top of raspbian and get the data in a format usable by PRTG. Since
+this data is simply text on a web page, it should be easy to add it to other
+monitoring systems as well.
 
 ## Installation
 
